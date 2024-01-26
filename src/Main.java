@@ -26,16 +26,17 @@ public class Main {
         byte y = 67;
         //задача3
         System.out.println("Задача3");
-        byte numberStudentsLydmilyPavlovny = 23;
-        byte numberStudentsAnnaSergeevna = 27;
-        byte numberStudentsEkaterinaAndreevna = 30;
-        short totalPurchasedSheetsPaper = 480;
-        byte numberPurchasedSheetsPaperPerStudents = (byte) (totalPurchasedSheetsPaper / (numberStudentsLydmilyPavlovny + numberStudentsAnnaSergeevna + numberStudentsEkaterinaAndreevna));
+        int numberStudentsLydmilyPavlovny = 23;
+        int numberStudentsAnnaSergeevna = 27;
+        int numberStudentsEkaterinaAndreevna = 30;
+        int totalPurchasedSheetsPaper = 480;
+        int numberPurchasedSheetsPaperPerStudents = totalPurchasedSheetsPaper / (numberStudentsLydmilyPavlovny + numberStudentsAnnaSergeevna + numberStudentsEkaterinaAndreevna);
         System.out.println("На каждого ученика рассчитано по " + numberPurchasedSheetsPaperPerStudents + " листов бумаги.");
         //задача4
         System.out.println("Задача4");
         byte productivityInTwoMinutesBottles = 16;
         byte productivitySixteenBottlesForMinutes = 2;
+        byte productivitiInOneMinutesBottles = (byte) (productivityInTwoMinutesBottles / productivitySixteenBottlesForMinutes);
         byte time1InMinutes = 20;
         byte time2InDay = 1;
         short time2InMinutes = (short) (time2InDay * 24 * 60);
@@ -43,13 +44,13 @@ public class Main {
         short time3InMinutes = (short) (time3InDay * 24 * 60);
         byte time4InMonths = 1;
         int time4InMinutes = time4InMonths * 30 * 24 * 60;
-        short productivityInTime1 = (short) ((time1InMinutes / productivitySixteenBottlesForMinutes) * productivityInTwoMinutesBottles);
+        short productivityInTime1 = (short) (time1InMinutes * productivitiInOneMinutesBottles);
         System.out.println("За " + time1InMinutes + " минут машина произвела " + productivityInTime1 + " штук бутылок.");
-        short productivityInTime2 = (short) ((time2InMinutes / productivitySixteenBottlesForMinutes) * productivityInTwoMinutesBottles);
+        short productivityInTime2 = (short) (time2InMinutes * productivitiInOneMinutesBottles);
         System.out.println("За " + time2InDay + " день машина произвела " + productivityInTime2 + " штук бутылок.");
-        int productivityInTime3 = (time3InMinutes / productivitySixteenBottlesForMinutes) * productivityInTwoMinutesBottles;
+        int productivityInTime3 = time3InMinutes * productivitiInOneMinutesBottles;
         System.out.println("За " + time3InDay + " дня машина произвела " + productivityInTime3 + " штук бутылок.");
-        int productivityInTime4 = (time4InMinutes / productivitySixteenBottlesForMinutes) * productivityInTwoMinutesBottles;
+        int productivityInTime4 = time4InMinutes * productivitiInOneMinutesBottles;
         System.out.println("За " + time4InMonths + " месяц машина произвела " + productivityInTime4 + " штук бутылок.");
         //задача5
         System.out.println("Задача5");
